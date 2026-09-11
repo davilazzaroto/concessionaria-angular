@@ -1,0 +1,49 @@
+.site-header {
+  align-items: center;
+  background: #101827;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  padding: 22px max(6vw, 24px);
+}
+
+.brand {
+  color: #fff;
+  font-size: 1.45rem;
+  font-weight: 900;
+  letter-spacing: -0.04em;
+  text-decoration: none;
+}
+
+.brand span {
+  color: #f47b45;
+}
+
+nav {
+  display: flex;
+  gap: 28px;
+}
+
+nav a {
+  color: #c7d1e3;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: color 160ms ease;
+}
+
+nav a:hover {
+  color: #f47b45;
+}
+
+@media (max-width: 520px) {
+  .site-header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  nav {
+    gap: 18px;
+  }
+}

@@ -1,0 +1,49 @@
+<section class="contato" id="contact" aria-labelledby="contato-titulo">
+  <h2 id="contato-titulo">Informações para contato</h2>
+  <p>Por favor, preencha todas as informações.</p>
+
+  <form [formGroup]="formulario" (ngSubmit)="enviar()" novalidate>
+    <fieldset>
+      <legend>Informações pessoais</legend>
+
+      <label for="full-name">Nome (obrigatório):</label>
+      <input
+        type="text"
+        id="full-name"
+        formControlName="nome"
+        placeholder="Ferdinando"
+        autocomplete="name"
+        aria-describedby="erro-nome"
+      />
+      @if (formulario.controls.nome.touched && formulario.controls.nome.invalid) {
+        <small id="erro-nome" class="erro">Informe seu nome.</small>
+      }
+
+      <label for="email">Email para contato (obrigatório):</label>
+      <input
+        id="email"
+        type="email"
+        formControlName="email"
+        placeholder="seila@exemplo.com"
+        autocomplete="email"
+        aria-describedby="erro-email"
+      />
+      @if (formulario.controls.email.touched && formulario.controls.email.invalid) {
+        <small id="erro-email" class="erro">Informe um email válido.</small>
+      }
+
+      <label for="nascimento">Data de nascimento (opcional):</label>
+      <input id="nascimento" type="date" formControlName="nascimento" />
+    </fieldset>
+
+    <fieldset>
+      <label for="comments">Algum comentário?</label>
+      <textarea rows="6" formControlName="comentario" id="comments"></textarea>
+    </fieldset>
+
+    <button type="submit">Enviar formulário</button>
+    @if (enviado()) {
+      <p class="sucesso" role="status">Formulário enviado com sucesso.</p>
+    }
+  </form>
+</section>

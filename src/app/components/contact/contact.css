@@ -1,0 +1,100 @@
+.contato {
+  padding: 24px 16px;
+  background: #eeeeee;
+  color: #f47b45;
+  text-align: center;
+}
+
+h2 {
+  color: black;
+  font-size: 32px;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+h2:hover {
+  color: #555;
+}
+
+.contato > p {
+  color: black;
+  font-size: 20px;
+}
+
+form {
+  box-sizing: border-box;
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #101827;
+  text-align: left;
+}
+
+fieldset {
+  display: grid;
+  gap: 8px;
+  margin: 0 0 16px;
+  padding: 0;
+  border: 0;
+}
+
+legend {
+  margin-bottom: 12px;
+  font-weight: bold;
+}
+
+input,
+textarea {
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 0;
+  padding: 10px;
+  border: 1px solid #006080;
+  border-radius: 4px;
+  background-color: #e5f8ff;
+  font: inherit;
+}
+
+textarea {
+  resize: vertical;
+}
+
+input:focus-visible,
+textarea:focus-visible,
+button:focus-visible {
+  outline: 3px solid #5d87e2;
+  outline-offset: 2px;
+}
+
+button {
+  padding: 10px 16px;
+  border: 0;
+  border-radius: 4px;
+  background-color: #eeeeee;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.erro {
+  color: #fff4a3;
+  font-weight: bold;
+}
+
+.sucesso {
+  margin-bottom: 0;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+}
+
+@media (max-width: 480px) {
+  .contato {
+    padding-inline: 8px;
+  }
+
+  form {
+    padding: 16px 12px;
+  }
+}
