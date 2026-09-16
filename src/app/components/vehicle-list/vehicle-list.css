@@ -1,0 +1,19 @@
+.catalogo {
+  padding: 40px max(6vw, 24px);
+  background: #f7f7f7;
+  color: #101827;
+}
+
+h2 {
+  margin: 0 0 24px;
+  color: #101827;
+  text-align: center;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}

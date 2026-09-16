@@ -1,0 +1,10 @@
+<article class="card">
+  <img [src]="veiculo.imagem" [alt]="veiculo.marca + ' ' + veiculo.modelo" />
+
+  <div class="card-content">
+    <h3>{{ veiculo.marca }} {{ veiculo.modelo }}</h3>
+    <p>Preço: R$ {{ veiculo.preco }}</p>
+    <p>Combustível: {{ veiculo.combustivel }}</p>
+    <p>Disponibilidade: {{ veiculo.disponibilidade ? 'Disponível' : 'Indisponível' }}</p>
+  </div>
+</article>

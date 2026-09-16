@@ -1,1 +1,7 @@
-<p>vehicle-list works!</p>
+<section class="catalogo" id="vehicles" aria-labelledby="catalogo-titulo">
+  <h2 id="catalogo-titulo">Veículos disponíveis</h2>
+
+  <div class="cards">
+    <app-vehicle-card *ngFor="let veiculo of veiculos" [veiculo]="veiculo"></app-vehicle-card>
+  </div>
+</section>

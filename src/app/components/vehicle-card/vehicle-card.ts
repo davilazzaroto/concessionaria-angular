@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Veiculo } from '../../models/veiculo';
 
 @Component({
   imports: [],
@@ -6,4 +7,6 @@ import { Component } from '@angular/core';
   styleUrl: './vehicle-card.css',
   templateUrl: './vehicle-card.html',
 })
-export class VehicleCard {}
+export class VehicleCard {
+  @Input() veiculo!: Veiculo;
+}
