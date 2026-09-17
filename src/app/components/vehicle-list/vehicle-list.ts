@@ -17,7 +17,7 @@ export class VehicleList {
       preco: 149900,
       combustivel: 'Gasolina',
       imagem: '/images/Mitsubishi_Lancer Evolution X.jpg',
-      disponibilidade: true,
+      disponivel: true,
     },
     {
       marca: 'Mitsubishi',
@@ -25,7 +25,7 @@ export class VehicleList {
       preco: 89900,
       combustivel: 'Flex',
       imagem: '/images/Mitsubishi_Lancer GT  2.0 (Geração X).jpg',
-      disponibilidade: true,
+      disponivel: true,
     },
     {
       marca: 'Mitsubishi',
@@ -33,7 +33,7 @@ export class VehicleList {
       preco: 75900,
       combustivel: 'Flex',
       imagem: '/images/Mitsubishi_Lancer Sedan (Geração X).jpg',
-      disponibilidade: false,
+      disponivel: false,
     },
     {
       marca: 'Mitsubishi',
@@ -41,7 +41,7 @@ export class VehicleList {
       preco: 82900,
       combustivel: 'Gasolina',
       imagem: '/images/Mitsubishi_Lancer GT  HL (Geração X).jpg',
-      disponibilidade: true,
+      disponivel: true,
     },
   ];
 }

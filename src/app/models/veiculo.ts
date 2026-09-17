@@ -4,5 +4,5 @@ export interface Veiculo {
   preco: number;
   combustivel: string;
   imagem: string;
-  disponibilidade: boolean;
+  disponivel: boolean;
 }

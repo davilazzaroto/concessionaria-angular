@@ -26,3 +26,20 @@ p {
   margin: 8px 0 0;
   color: #4b5563;
 }
+
+.status {
+  width: fit-content;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-weight: 600;
+}
+
+.status.disponivel {
+  color: #166534;
+  background: #dcfce7;
+}
+
+.status.indisponivel {
+  color: #991b1b;
+  background: #fee2e2;
+}

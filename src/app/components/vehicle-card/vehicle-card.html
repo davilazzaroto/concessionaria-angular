@@ -5,6 +5,10 @@
     <h3>{{ veiculo.marca }} {{ veiculo.modelo }}</h3>
     <p>Preço: R$ {{ veiculo.preco }}</p>
     <p>Combustível: {{ veiculo.combustivel }}</p>
-    <p>Disponibilidade: {{ veiculo.disponibilidade ? 'Disponível' : 'Indisponível' }}</p>
+    @if (veiculo.disponivel) {
+      <p class="status disponivel">Disponível</p>
+    } @else {
+      <p class="status indisponivel">Indisponível</p>
+    }
   </div>
 </article>
