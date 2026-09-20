@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Veiculo } from '../../models/veiculo';
 
 @Component({
   imports: [],
@@ -6,4 +7,11 @@ import { Component } from '@angular/core';
   styleUrl: './vehicle-details.css',
   templateUrl: './vehicle-details.html',
 })
-export class VehicleDetails {}
+export class VehicleDetails {
+  @Input() veiculo!: Veiculo;
+  @Output() fechar = new EventEmitter<void>();
+
+  fecharDetalhes(): void {
+    this.fechar.emit();
+  }
+}

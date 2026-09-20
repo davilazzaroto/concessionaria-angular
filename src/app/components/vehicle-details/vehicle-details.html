@@ -1,1 +1,27 @@
-<p>vehicle-details works!</p>
+<article class="details" aria-labelledby="detalhes-titulo">
+	<div class="details-image">
+		<img [src]="veiculo.imagem" [alt]="veiculo.marca + ' ' + veiculo.modelo" />
+	</div>
+
+	<div class="details-content">
+		<div class="details-heading">
+			<div>
+				<p class="eyebrow">Detalhes do veículo</p>
+				<h3 id="detalhes-titulo">{{ veiculo.marca }} {{ veiculo.modelo }}</h3>
+			</div>
+			<button type="button" class="close-button" (click)="fecharDetalhes()">
+				Fechar
+			</button>
+		</div>
+
+		<div class="details-info">
+			<p><strong>Preço:</strong> R$ {{ veiculo.preco }}</p>
+			<p><strong>Combustível:</strong> {{ veiculo.combustivel }}</p>
+			@if (veiculo.disponivel) {
+				<p><strong>Disponibilidade:</strong> Disponível para compra</p>
+			} @else {
+				<p><strong>Disponibilidade:</strong> Indisponível no momento</p>
+			}
+		</div>
+	</div>
+</article>

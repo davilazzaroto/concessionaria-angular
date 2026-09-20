@@ -6,12 +6,12 @@
     <fieldset>
       <legend>Informações pessoais</legend>
 
-      <label for="full-name">Nome (obrigatório):</label>
+      <label for="full-name">Nome Completo:</label>
       <input
         type="text"
         id="full-name"
         formControlName="nome"
-        placeholder="Ferdinando"
+        placeholder="Ferdinando de La Cruz"
         autocomplete="name"
         aria-describedby="erro-nome"
       />
@@ -19,7 +19,7 @@
         <small id="erro-nome" class="erro">Informe seu nome.</small>
       }
 
-      <label for="email">Email para contato (obrigatório):</label>
+      <label for="email">Email para contato:</label>
       <input
         id="email"
         type="email"
@@ -32,7 +32,7 @@
         <small id="erro-email" class="erro">Informe um email válido.</small>
       }
 
-      <label for="nascimento">Data de nascimento (opcional):</label>
+      <label for="nascimento">Data de nascimento:</label>
       <input id="nascimento" type="date" formControlName="nascimento" />
     </fieldset>
 

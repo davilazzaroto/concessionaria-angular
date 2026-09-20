@@ -1,15 +1,18 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { VehicleCard } from '../vehicle-card/vehicle-card';
+import { VehicleDetails } from '../vehicle-details/vehicle-details';
 import { Veiculo } from '../../models/veiculo';
 
 @Component({
-  imports: [CommonModule, VehicleCard],
+  imports: [CommonModule, VehicleCard, VehicleDetails],
   selector: 'app-vehicle-list',
   styleUrl: './vehicle-list.css',
   templateUrl: './vehicle-list.html',
 })
 export class VehicleList {
+  veiculoSelecionado: Veiculo | null = null;
+
   veiculos: Veiculo[] = [
     {
       marca: 'Mitsubishi',
@@ -44,4 +47,12 @@ export class VehicleList {
       disponivel: true,
     },
   ];
+
+  selecionarVeiculo(veiculo: Veiculo): void {
+    this.veiculoSelecionado = veiculo;
+  }
+
+  fecharDetalhes(): void {
+    this.veiculoSelecionado = null;
+  }
 }

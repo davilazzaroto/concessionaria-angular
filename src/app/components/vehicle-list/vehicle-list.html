@@ -2,6 +2,17 @@
   <h2 id="catalogo-titulo">Veículos disponíveis</h2>
 
   <div class="cards">
-    <app-vehicle-card *ngFor="let veiculo of veiculos" [veiculo]="veiculo"></app-vehicle-card>
+    <app-vehicle-card
+      *ngFor="let veiculo of veiculos"
+      [veiculo]="veiculo"
+      (verDetalhes)="selecionarVeiculo($event)"
+    ></app-vehicle-card>
   </div>
+
+  @if (veiculoSelecionado) {
+    <app-vehicle-details
+      [veiculo]="veiculoSelecionado"
+      (fechar)="fecharDetalhes()"
+    ></app-vehicle-details>
+  }
 </section>

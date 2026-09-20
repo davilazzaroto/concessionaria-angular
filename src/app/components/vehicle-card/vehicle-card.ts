@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Veiculo } from '../../models/veiculo';
 
 @Component({
@@ -9,4 +9,9 @@ import { Veiculo } from '../../models/veiculo';
 })
 export class VehicleCard {
   @Input() veiculo!: Veiculo;
+  @Output() verDetalhes = new EventEmitter<Veiculo>();
+
+  selecionarVeiculo(): void {
+    this.verDetalhes.emit(this.veiculo);
+  }
 }
