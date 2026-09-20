@@ -11,8 +11,10 @@ import { Veiculo } from '../../models/veiculo';
   templateUrl: './vehicle-list.html',
 })
 export class VehicleList {
+  // Armazena o veículo selecionado para exibição dos detalhes
   veiculoSelecionado: Veiculo | null = null;
 
+  // Lista de veículos disponíveis no catálogo
   veiculos: Veiculo[] = [
     {
       marca: 'Mitsubishi',
@@ -80,6 +82,7 @@ export class VehicleList {
     },
   ];
 
+  // Define o veículo selecionado e rola suavemente até a seção de detalhes
   selecionarVeiculo(veiculo: Veiculo): void {
     this.veiculoSelecionado = veiculo;
     setTimeout(() => {
@@ -87,6 +90,7 @@ export class VehicleList {
     });
   }
 
+  // Limpa o veículo selecionado para fechar os detalhes
   fecharDetalhes(): void {
     this.veiculoSelecionado = null;
   }

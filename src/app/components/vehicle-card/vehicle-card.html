@@ -1,15 +1,21 @@
 <article class="card">
+  <!-- Property Binding: vincula atributos de imagem às propriedades do modelo -->
   <img [src]="veiculo.imagem" [alt]="veiculo.marca + ' ' + veiculo.modelo" />
 
   <div class="card-content">
+    <!-- Interpolação: exibe os valores das propriedades diretamente no template -->
     <h3>{{ veiculo.marca }} {{ veiculo.modelo }}</h3>
     <p>Preço: R$ {{ veiculo.preco }}</p>
     <p>Combustível: {{ veiculo.combustivel }}</p>
+
+    <!-- @if/@else: exibe condicionalmente a disponibilidade do veículo -->
     @if (veiculo.disponivel) {
       <p class="status disponivel">Disponível</p>
     } @else {
       <p class="status indisponivel">Indisponível</p>
     }
+
+    <!-- Event Binding: escuta o clique do usuário para disparar a seleção -->
     <button type="button" class="details-button" (click)="selecionarVeiculo()">Ver detalhes</button>
   </div>
 </article>

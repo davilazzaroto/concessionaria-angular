@@ -9,7 +9,10 @@ import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angula
   templateUrl: './contact.html',
 })
 export class Contact {
+  // Sinal reativo para controlar a exibição da confirmação de envio
   protected readonly enviado = signal(false);
+
+  // Formulário reativo (FormGroup) com validações nos campos obrigatórios
   protected readonly formulario = new FormGroup({
     nome: new FormControl('', { nonNullable: true, validators: [Validators.required] }),
     email: new FormControl('', {
@@ -20,6 +23,7 @@ export class Contact {
     comentario: new FormControl('', { nonNullable: true }),
   });
 
+  // Valida os campos antes de confirmar o envio e limpar o formulário
   protected enviar(): void {
     this.enviado.set(false);
 

@@ -2,6 +2,7 @@
   <h2 id="contato-titulo">Informações para contato</h2>
   <p>Preencha os campos obrigatórios para entrar em contato.</p>
 
+  <!-- Associação do FormGroup via Property Binding e captura do envio com (ngSubmit) -->
   <form [formGroup]="formulario" (ngSubmit)="enviar()" novalidate>
     <fieldset>
       <legend>Informações pessoais</legend>
@@ -17,6 +18,7 @@
           formulario.controls.nome.touched && formulario.controls.nome.invalid ? 'erro-nome' : null
         "
       />
+      <!-- @if: renderiza o aviso de validação caso o campo esteja inválido após interação -->
       @if (formulario.controls.nome.touched && formulario.controls.nome.invalid) {
         <small id="erro-nome" class="erro" role="alert">Informe seu nome.</small>
       }
@@ -49,6 +51,7 @@
     </fieldset>
 
     <button type="submit">Enviar formulário</button>
+    <!-- @if: exibe a mensagem de sucesso com base no estado reativo (signal) -->
     @if (enviado()) {
       <p class="sucesso" role="status">Formulário enviado com sucesso.</p>
     }

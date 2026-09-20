@@ -2,6 +2,7 @@
   <h2 id="catalogo-titulo">Veículos disponíveis</h2>
 
   <div class="cards">
+    <!-- *ngFor itera sobre os veículos; Property Binding [veiculo] envia os dados e Event Binding (verDetalhes) captura o clique -->
     <app-vehicle-card
       *ngFor="let veiculo of veiculos"
       [veiculo]="veiculo"
@@ -9,6 +10,7 @@
     ></app-vehicle-card>
   </div>
 
+  <!-- @if renderiza a seção de detalhes apenas quando houver um veículo selecionado -->
   @if (veiculoSelecionado) {
     <app-vehicle-details
       id="detalhes"

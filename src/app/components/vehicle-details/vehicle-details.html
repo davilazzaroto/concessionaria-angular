@@ -9,12 +9,14 @@
         <p class="eyebrow">Detalhes do veículo</p>
         <h3 id="detalhes-titulo">{{ veiculo.marca }} {{ veiculo.modelo }}</h3>
       </div>
+      <!-- Event Binding: aciona o método de fechamento dos detalhes -->
       <button type="button" class="close-button" (click)="fecharDetalhes()">Fechar</button>
     </div>
 
     <div class="details-info">
       <p><strong>Preço:</strong> R$ {{ veiculo.preco }}</p>
       <p><strong>Combustível:</strong> {{ veiculo.combustivel }}</p>
+      <!-- @if/@else: exibe a mensagem de acordo com a disponibilidade -->
       @if (veiculo.disponivel) {
         <p><strong>Disponibilidade:</strong> Disponível para compra</p>
       } @else {

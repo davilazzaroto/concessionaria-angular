@@ -24,7 +24,6 @@ Aplicação web de uma concessionária de veículos desenvolvida em Angular para
 - **Componentes:** divisão da interface em componentes reutilizáveis (`Header`, `Footer`, `VehicleList`, `VehicleCard`, `VehicleDetails`, `Contact`).
 - **Interpolação:** exibição dinâmica de dados no template através de `{{ }}`.
 - **Property Binding:** envio de dados para propriedades de elementos e componentes filhos usando `[ ]`.
-- **Event Binding:** escuta de eventos de clique e submissão com `( )`, além de comunicação entre componentes via `@Output()` e `EventEmitter`.
 - *_Controle de fluxo (@if/@else e *ngFor):*_ renderização condicional de elementos com `@if`/`@else` e iteração sobre a lista de veículos com `*ngFor`.
 - **Formulários Reativos (Reactive Forms):** gerenciamento e validação dos campos de contato via `FormGroup` e `FormControl`.
 
@@ -33,7 +32,7 @@ Aplicação web de uma concessionária de veículos desenvolvida em Angular para
 1. Clone o repositório:
 
 ```bash
-git clone [URL_DO_REPOSITORIO]
+git clone https://github.com/davilazzaroto/concessionaria-angular.git
 ```
 
 2. Acesse a pasta do projeto:
@@ -59,14 +58,28 @@ http://localhost:4200
 
 ## Screenshots
 
-![Catálogo de veículos](docs/catalogo.png)
-![Detalhes do veículo](docs/detalhes.png)
-![Contato](docs/contato.png)
+### 1. Catálogo de veículos
+
+Apresenta o catálogo principal da DD Motors com os veículos cadastrados, preços, combustível e disponibilidade.
+
+![Catálogo de veículos](public/docs/img_home.png)
+
+### 2. Detalhes do veículo
+
+O usuário pode selecionar um veículo para visualizar seus detalhes.
+
+![Detalhes do veículo](public/docs/img_detail_card.png)
+
+### 3. Área de contato
+
+A aplicação possui uma área de contato com formulário demonstrativo.
+
+![Área de contato](public/docs/img_contato.png)
 
 ## Vídeo de apresentação
 
 [Assistir apresentação no YouTube](LINK_DO_VIDEO)
-
+==> falta terminar de gravar e editar o vídeo.
 ## Autor
 
 Davi Antônio Galeano Lazzaroto
