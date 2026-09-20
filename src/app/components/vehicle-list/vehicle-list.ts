@@ -46,10 +46,45 @@ export class VehicleList {
       imagem: '/images/Mitsubishi_Lancer GT  HL (Geração X).jpg',
       disponivel: true,
     },
+    {
+      marca: 'Chevrolet',
+      modelo: 'Onix Plus',
+      preco: 92900,
+      combustivel: 'Flex',
+      imagem: '/images/Chevrolet_Onix_Plus.jpg',
+      disponivel: true,
+    },
+    {
+      marca: 'Volkswagen',
+      modelo: 'Polo',
+      preco: 87900,
+      combustivel: 'Flex',
+      imagem: '/images/Volkswagen_Polo..jpg',
+      disponivel: true,
+    },
+    {
+      marca: 'Hyundai',
+      modelo: 'HB20',
+      preco: 82900,
+      combustivel: 'Flex',
+      imagem: '/images/Hyundai_HB20..jpg',
+      disponivel: true,
+    },
+    {
+      marca: 'Fiat',
+      modelo: 'Argo',
+      preco: 74900,
+      combustivel: 'Flex',
+      imagem: '/images/Fiat_Argo..jpg',
+      disponivel: false,
+    },
   ];
 
   selecionarVeiculo(veiculo: Veiculo): void {
     this.veiculoSelecionado = veiculo;
+    setTimeout(() => {
+      document.getElementById('detalhes')?.scrollIntoView({ behavior: 'smooth' });
+    });
   }
 
   fecharDetalhes(): void {

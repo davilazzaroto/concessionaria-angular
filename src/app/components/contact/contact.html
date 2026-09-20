@@ -13,7 +13,9 @@
         formControlName="nome"
         placeholder="Ferdinando de La Cruz"
         autocomplete="name"
-        [attr.aria-describedby]="formulario.controls.nome.touched && formulario.controls.nome.invalid ? 'erro-nome' : null"
+        [attr.aria-describedby]="
+          formulario.controls.nome.touched && formulario.controls.nome.invalid ? 'erro-nome' : null
+        "
       />
       @if (formulario.controls.nome.touched && formulario.controls.nome.invalid) {
         <small id="erro-nome" class="erro" role="alert">Informe seu nome.</small>
@@ -26,7 +28,11 @@
         formControlName="email"
         placeholder="seila@exemplo.com"
         autocomplete="email"
-        [attr.aria-describedby]="formulario.controls.email.touched && formulario.controls.email.invalid ? 'erro-email' : null"
+        [attr.aria-describedby]="
+          formulario.controls.email.touched && formulario.controls.email.invalid
+            ? 'erro-email'
+            : null
+        "
       />
       @if (formulario.controls.email.touched && formulario.controls.email.invalid) {
         <small id="erro-email" class="erro" role="alert">Informe um email válido.</small>

@@ -3,6 +3,14 @@
   border-radius: 8px;
   background: #fff;
   box-shadow: 0 2px 8px rgb(16 24 39 / 12%);
+  transition:
+    transform 200ms ease,
+    box-shadow 200ms ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgb(16 24 39 / 16%);
 }
 
 .card img {
@@ -54,7 +62,9 @@ p {
   background: #101827;
   cursor: pointer;
   font-weight: 600;
-  transition: background-color 160ms ease, transform 160ms ease;
+  transition:
+    background-color 160ms ease,
+    transform 160ms ease;
 }
 
 .details-button:hover {

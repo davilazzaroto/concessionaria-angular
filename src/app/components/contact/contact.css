@@ -75,7 +75,9 @@ button {
   font-size: 18px;
   font-weight: bold;
   cursor: pointer;
-  transition: background-color 160ms ease, transform 160ms ease;
+  transition:
+    background-color 160ms ease,
+    transform 160ms ease;
 }
 
 button:hover {

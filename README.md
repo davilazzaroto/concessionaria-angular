@@ -1,59 +1,72 @@
-# ConcessionariaAngular
+# DD Motors — Concessionária
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 22.0.8.
+## Sobre o projeto
 
-## Development server
+Aplicação web de uma concessionária de veículos desenvolvida em Angular para fins acadêmicos na disciplina de Desenvolvimento Web. O projeto apresenta uma página única (SPA) com catálogo de automóveis, verificação de disponibilidade, exibição de detalhes e uma seção de contato com validação de formulário.
 
-To start a local development server, run:
+## Funcionalidades
+
+- **Catálogo de veículos:** listagem de automóveis contendo foto, marca, modelo, preço e tipo de combustível.
+- **Status de disponibilidade:** indicação visual se o veículo está disponível ou indisponível para compra.
+- **Visualização de detalhes:** painel com informações detalhadas do veículo selecionado, com opção de fechar.
+- **Formulário de contato:** formulário para envio de dúvidas e comentários, com validação de campos obrigatórios (nome e e-mail) e mensagem de confirmação de envio.
+- **Navegação rápida:** menu superior com links para início, veículos e contato, além de rodapé informativo.
+
+## Tecnologias utilizadas
+
+- Angular
+- TypeScript
+- HTML
+- CSS
+
+## Conceitos do Angular utilizados
+
+- **Componentes:** divisão da interface em componentes reutilizáveis (`Header`, `Footer`, `VehicleList`, `VehicleCard`, `VehicleDetails`, `Contact`).
+- **Interpolação:** exibição dinâmica de dados no template através de `{{ }}`.
+- **Property Binding:** envio de dados para propriedades de elementos e componentes filhos usando `[ ]`.
+- **Event Binding:** escuta de eventos de clique e submissão com `( )`, além de comunicação entre componentes via `@Output()` e `EventEmitter`.
+- *_Controle de fluxo (@if/@else e *ngFor):*_ renderização condicional de elementos com `@if`/`@else` e iteração sobre a lista de veículos com `*ngFor`.
+- **Formulários Reativos (Reactive Forms):** gerenciamento e validação dos campos de contato via `FormGroup` e `FormControl`.
+
+## Como executar
+
+1. Clone o repositório:
+
+```bash
+git clone [URL_DO_REPOSITORIO]
+```
+
+2. Acesse a pasta do projeto:
+
+```bash
+cd concessionaria-angular
+```
+
+3. Instale as dependências:
+
+```bash
+npm install
+```
+
+4. Inicie o servidor de desenvolvimento:
 
 ```bash
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+A aplicação ficará disponível em:
+http://localhost:4200
 
-## Code scaffolding
+## Screenshots
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+![Catálogo de veículos](docs/catalogo.png)
+![Detalhes do veículo](docs/detalhes.png)
+![Contato](docs/contato.png)
 
-```bash
-ng generate component component-name
-```
+## Vídeo de apresentação
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+[Assistir apresentação no YouTube](LINK_DO_VIDEO)
 
-```bash
-ng generate --help
-```
+## Autor
 
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Davi Antônio Galeano Lazzaroto
