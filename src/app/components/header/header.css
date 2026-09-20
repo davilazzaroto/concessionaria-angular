@@ -32,6 +32,12 @@ nav a {
   transition: color 160ms ease;
 }
 
+nav a:focus-visible,
+.brand:focus-visible {
+  outline: 3px solid #f47b45;
+  outline-offset: 4px;
+}
+
 nav a:hover {
   color: #f47b45;
 }
@@ -44,6 +50,7 @@ nav a:hover {
   }
 
   nav {
+    flex-wrap: wrap;
     gap: 18px;
   }
 }

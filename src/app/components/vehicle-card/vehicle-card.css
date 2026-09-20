@@ -54,8 +54,15 @@ p {
   background: #101827;
   cursor: pointer;
   font-weight: 600;
+  transition: background-color 160ms ease, transform 160ms ease;
 }
 
 .details-button:hover {
   background: #26344d;
+  transform: translateY(-1px);
+}
+
+.details-button:focus-visible {
+  outline: 3px solid #5d87e2;
+  outline-offset: 2px;
 }

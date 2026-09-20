@@ -1,6 +1,6 @@
 <section class="contato" id="contact" aria-labelledby="contato-titulo">
   <h2 id="contato-titulo">Informações para contato</h2>
-  <p>Por favor, preencha todas as informações.</p>
+  <p>Preencha os campos obrigatórios para entrar em contato.</p>
 
   <form [formGroup]="formulario" (ngSubmit)="enviar()" novalidate>
     <fieldset>
@@ -13,10 +13,10 @@
         formControlName="nome"
         placeholder="Ferdinando de La Cruz"
         autocomplete="name"
-        aria-describedby="erro-nome"
+        [attr.aria-describedby]="formulario.controls.nome.touched && formulario.controls.nome.invalid ? 'erro-nome' : null"
       />
       @if (formulario.controls.nome.touched && formulario.controls.nome.invalid) {
-        <small id="erro-nome" class="erro">Informe seu nome.</small>
+        <small id="erro-nome" class="erro" role="alert">Informe seu nome.</small>
       }
 
       <label for="email">Email para contato:</label>
@@ -26,17 +26,18 @@
         formControlName="email"
         placeholder="seila@exemplo.com"
         autocomplete="email"
-        aria-describedby="erro-email"
+        [attr.aria-describedby]="formulario.controls.email.touched && formulario.controls.email.invalid ? 'erro-email' : null"
       />
       @if (formulario.controls.email.touched && formulario.controls.email.invalid) {
-        <small id="erro-email" class="erro">Informe um email válido.</small>
+        <small id="erro-email" class="erro" role="alert">Informe um email válido.</small>
       }
 
       <label for="nascimento">Data de nascimento:</label>
-      <input id="nascimento" type="date" formControlName="nascimento" />
+      <input id="nascimento" type="date" formControlName="nascimento" autocomplete="bday" />
     </fieldset>
 
     <fieldset>
+      <legend>Mensagem</legend>
       <label for="comments">Algum comentário?</label>
       <textarea rows="6" formControlName="comentario" id="comments"></textarea>
     </fieldset>

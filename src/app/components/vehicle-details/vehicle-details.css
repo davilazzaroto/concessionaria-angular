@@ -60,10 +60,16 @@ h3 {
 	background: #fff;
 	cursor: pointer;
 	font-weight: 600;
+	transition: background-color 160ms ease;
 }
 
 .close-button:hover {
 	background: #f3f4f6;
+}
+
+.close-button:focus-visible {
+	outline: 3px solid #5d87e2;
+	outline-offset: 2px;
 }
 
 @media (max-width: 600px) {
