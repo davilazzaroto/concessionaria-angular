@@ -76,10 +76,12 @@ A aplicação possui uma área de contato com formulário demonstrativo.
 
 ![Área de contato](public/docs/img_contato.png)
 
-## Vídeo de apresentação
+## 🎥 Vídeo de apresentação
 
-[Assistir apresentação no YouTube](LINK_DO_VIDEO)
-==> falta terminar de gravar e editar o vídeo.
+A apresentação e demonstração do projeto está disponível no YouTube:
+
+▶️ [Assistir à apresentação do projeto](https://youtu.be/R4UfgpAz7Ik)
+
 ## Autor
 
 Davi Antônio Galeano Lazzaroto
